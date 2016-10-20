@@ -1,0 +1,188 @@
+@import "mixins/media-queries";
+
+// colors
+$primary-color: #1A75CE;
+$white-color: #FFF;
+$background-color: #F5F5F5;
+$success-color: #5c9e0d;
+$pending-color:  #f37b20;
+$error-color: #c33;
+$neutral-color: #999;
+
+body {
+  background: $background-color;
+}
+
+.title {
+  margin: 0;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.main-text { // product-name
+  font-size: 2rem;
+  color: $primary-color;
+  font-weight: 300;
+  display: block;
+
+  &.main-text-big {
+    font-size: 2.5rem;
+  }
+}
+
+.follow-text {
+  color: $neutral-color;
+  font-size: 1.3rem;
+  display: block;
+
+  &.follow-text-crossed {
+    text-decoration: line-through;
+  }
+}
+
+/* bootstrap overwrite defaults */
+
+.navbar-default {
+  background: $primary-color;
+
+  .navbar-toggle {
+    border-color: $white-color;
+
+    .icon-bar {
+      background-color: $white-color;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $pending-color;
+    }
+  }
+
+  .navbar-brand {
+    color: $white-color;
+
+    &:hover {
+      color: $white-color;
+    }
+  }
+
+  .navbar-nav > li > a {
+    color: $white-color;
+
+    &:hover,
+    &:focus {
+      color: $white-color;
+      text-decoration: underline;
+    }
+  }
+}
+
+.card {
+  margin-bottom: 10px;
+  position: relative;
+
+  .image-container {
+    position: relative;
+    background: $white-color;
+    padding: 20px;
+    border: 1px solid gainsboro;
+    border-radius: 3px;
+    overflow: hidden;
+
+    .btn-primary {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+    }
+
+    &.animated-container {
+      cursor: pointer;
+      transition: box-shadow .25s ease-in;
+
+      &:hover,
+      &:active {
+        box-shadow: 3px 3px 4px 3px gainsboro;
+      }
+    }
+  }
+
+  .button-container {
+    text-align: right;
+  }
+
+  .details {
+    float: left;
+    padding-left: 20px;
+    width: calc(100% - 200px);
+  }
+
+  .product-img {
+    float: left;
+    width: 150px;
+  }
+
+  .price {
+    color: $success-color;
+    font-size: 2.5rem;
+    display: block;
+  }
+}
+
+.transition {
+  display: block;
+
+  &.transition-success {
+    color: $success-color;
+  }
+
+  &.transition-pending {
+    color: $pending-color;
+  }
+
+  &.transition-error {
+    color: $error-color;
+  }
+}
+
+.main-info {
+  margin-bottom: 15px;
+}
+
+.product-detail {
+  .details {
+    margin-bottom: 10px;
+  }
+
+  .form-inline .input-group {
+    margin-left: 20px;
+  }
+}
+
+@include iphone6 {
+  .card {
+    .product-img,
+    .details {
+      float: none;
+    }
+
+    .product-img {
+      margin: 0 auto;
+    }
+
+    .image-container {
+      text-align: center;
+    }
+
+    .follow-text,
+    .price,
+    .main-text {
+      text-align: left;
+    }
+  }
+
+  .transition {
+    text-align: left;
+  }
+}
+

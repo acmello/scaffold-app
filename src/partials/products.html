@@ -1,0 +1,16 @@
+<h1 class="title">Produtos</h1>
+
+<div class="card col-md-6" ng-repeat="product in productCtrl.products">
+  <figure class="image-container animated-container">
+    <img class="product-img" ng-src="public/assets/images/iphone.png" alt="moto g">
+    <figurecaption class="details">
+      <span class="main-text">{{product.name}}</span>
+      <span class="price">R$ {{product.price}}</span>
+    </figurecaption>
+    <div class="button-container">
+      <a ui-sref="detail({id: product.id})" class="btn btn-default">
+        <span>Ver mais</span>
+      </a>
+    </div>
+  </figure>
+</div>

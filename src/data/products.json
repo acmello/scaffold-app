@@ -1,0 +1,20 @@
+{
+  "requests": [
+      {
+        "id": 1,
+        "product": "Smartphone Motorola Moto G",
+        "oldPrice": "1.999,00",
+        "price": "1.700,00",
+        "additionalInfo": "10x de R$ 89,90 sem juros",
+        "imgSrc": "public/assets/images/motog.png"
+      },
+      {
+      "id": 2,
+        "product": "Iphone 5S",
+        "oldPrice": "2.999,00",
+        "price": "2.400,00",
+        "additionalInfo": "10x de R$ 89,90 sem juros",
+        "imgSrc": "public/assets/images/iphone.png"
+      }
+  ]
+}

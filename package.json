@@ -1,0 +1,29 @@
+{
+  "name": "wallmart-desafio",
+  "version": "1.0.0",
+  "description": "desafio front-end wallmart.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/acmello/wallmart-desafio.git"
+  },
+  "author": "acmello",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/acmello/wallmart-desafio/issues"
+  },
+  "homepage": "https://gitlab.com/acmello/wallmart-desafio#README",
+  "dependencies": {
+    "browser-sync": "^2.11.1",
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rimraf": "^0.2.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.1"
+  }
+}

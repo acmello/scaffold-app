@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Wallmart - front end test</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<!-- vendor dependencies -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="public/vendors/bootstrap/dist/css/bootstrap.min.css">
+
+  <!-- specific css -->
+  <link rel="stylesheet" href="public/stylesheet/app.css">
+</head>
+<body ng-app="myApp">
+
+  <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">McFadyen</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a ui-sref="request">Produtos</a></li>
+            <li><a ui-sref="request">Meu carrinho (0 items)</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+  <div class="container">
+    <div ui-view></div>
+  </div>
+	<!-- vendor dependencies -->
+	<script src="public/vendors/angular/angular.min.js"></script>
+  <script src="public/vendors/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="public/vendors/jquery/dist/jquery.min.js"></script>
+  <script src="public/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+
+	<!-- application script -->
+	<script src="public/js/all.min.js"></script>
+</body>
+</html>
